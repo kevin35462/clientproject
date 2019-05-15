@@ -1,8 +1,23 @@
-h1 {
-  color: fuchsia;
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
 }
-
-.center{
-    display: flex;
-    justify-content: center;
+#Big{
+  font-size:  100px;
+}
+#notBig{
+  font-size:  30px;
+}
+li{
+  font-size: 70px;
+}
+body{
+  background-image: url("https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif");
+  background-size: cover;
+}
+html,::placeholder{
+  color: red;
+}
+#IP{
+  size: 990px;
 }
