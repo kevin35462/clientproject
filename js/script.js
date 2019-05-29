@@ -1,5 +1,4 @@
 /* global $ */
-var songList = [""]
 
 
 
@@ -11,26 +10,29 @@ $("#PlaySong").click(function() {
         url: api,
         method: "GET",
         success: function(response) {
-            console.log(api);
+            // checks the success of the api call
+            console.log("API: " + api);
             console.log('response', response);
-            console.log(response[0].permalink_url);
+            console.log("Song Link: " + response[0].permalink_url);
+                
+            // response[0].permalink_url
             SC.oEmbed(response[0].permalink_url, { auto_play: true }).then(function(oEmbed) {
-                function updateSong() {
-                    $("ol").append("<li>" + oEmbed.html + "</li>");
-                }
-                updateSong();
-                $("ol").append("<button id = 'DelSong'>'Delete Song'</button>");
-                songList.push(oEmbed.html);
-                $("#Del").click(function() {
-                    songList.remove(songList.length - 1);
-                    updateSong();
-                    console.log("hi");
+                    function updateSong() {
+                        // songList.push(oEmBed.html); 
+                        // console.log(songList);
+                        console.log("oEmbed: " + oEmbed);
+                        console.log("oEmbed.html: " + oEmbed.html);
+                        $(".songOrderedList").append("<li>" + oEmbed.html + "</li>");
+                    }
+                        
+                    // calls the UpdateSong playlist to add the song to the view and appends the delete button
+                    updateSong(); 
+                    
+                        
+                    
                 });
-            });
-            // window.location = response[0].permalink_url;
-            //$("iframe").attr("src", response[0].permalink_url);
-
-
-        }
-    });
+                // window.location = response[0].permalink_url;
+                // $("iframe").attr("src", response[0].permalink_url);
+            }
+    });  
 });

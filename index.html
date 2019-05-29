@@ -13,21 +13,24 @@
 </head>
 
 <body>
-  <div id="Big"><hl>Music Player</h1></div>
-    <div>
-      <input id="IP" placeholder="Type a song here">
-      <div id="notBig"><p>  To search for Song, click the Play Button</p>
+  <div id="Big">
+    <hl id="Title">Music Player</h1>
+  </div>
+  <div>
+    <input id="IP" placeholder="Type a song here">
+    <div id="notBig">
+      <p id="SubT"> <br>To search for a Song, type in the input box<br>and click the "Play Song" Button</p>
 
 
-    
-    <h2>Playlist</h2>
-    <button id="PlaySong">Play Song</button>
+
+      <h2 id="PL">Playlist</h2>
+      <button id="PlaySong">Play Song</button>
     </div>
-      <div>
-        <ol>
-      
-        </ol>
-      </div>
+    <div>
+      <ol class="songOrderedList">
+
+      </ol>
+    </div>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

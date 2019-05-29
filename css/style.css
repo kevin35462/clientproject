@@ -2,22 +2,37 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
 }
-#Big{
-  font-size:  100px;
+
+#Big {
+  font-size: 100px;
 }
-#notBig{
-  font-size:  30px;
+#Title{
+  background-color: black;
+  border-radius: 10%;
 }
-li{
+#notBig {
+  font-size: 30px;
+  background-color: black;
+  border-radius: 60%;
+}
+
+
+
+li {
   font-size: 70px;
 }
-body{
-  background-image: url("https://media.giphy.com/media/3o6vXTpomeZEyxufGU/giphy.gif");
+
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxUOPmLGV04wY70tjwNr2g2RzhuDYWlKop47efwIPdwRdpeBj");
   background-size: cover;
 }
-html,::placeholder{
+
+html,
+::placeholder {
   color: red;
 }
-#IP{
-  size: 990px;
+#PlaySong{
+  background-color: red;
+  color: white;
+  border-color: black;
 }
